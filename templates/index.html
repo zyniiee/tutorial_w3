@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <ul>
+    {% for question in all_questions %}
+        <li>
+            Question: {{ question.question_text }}
+            Publish Date: {{ question.pub_date }}
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
