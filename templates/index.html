@@ -8,6 +8,11 @@
         <li>
             Question: {{ question.question_text }}
             Publish Date: {{ question.pub_date }}
+        {% for choice in question.choice_set.all %}
+            choice: {{ choice.choice_text }}
+            votes: {{ choice.votes }}
+                {% endfor %}
+
         </li>
     {% endfor %}
     </ul>
